@@ -106,7 +106,7 @@ function longestName(bucketOfSloths) {
  		arr.push(name) ;
  	}
  	 return reduce(arr,function(max,ele){
- 	 			if(ele > max) {
+ 	 			if(ele.length > max.length) {
  	 				max = ele
  	 			}
  })
@@ -122,6 +122,13 @@ function longestName(bucketOfSloths) {
 
   function wordLengths(str){
   //your code is here
+   var s =[] ;
+   s = str.split(" ") ;
+      return map(s,function(ele,i) {
+   	 ele = ele.length+1 ;
+   
+   })
+     
   }
 
   wordLengths("hello its me") // [5,3,2]
@@ -133,6 +140,16 @@ function longestName(bucketOfSloths) {
 
   function countOccurrences(string, character) { 
     // your code is here
+    var count = 0 ;
+    var str = [] ;
+    str = string.split("") ;
+     reduce(str,function(ele,i) {
+    	if(ele === character) {
+    		count+=1 ;
+
+    	}
+    })
+    	return count
   }
   // countOccurrences("hello", "l"); // 2
   // countOccurrences("hello, world!", "l"); // 3
@@ -146,6 +163,11 @@ function longestName(bucketOfSloths) {
 
   function values(obj){
   // your code is here
+  var arr = [] ;
+  each(obj,function(val,key) {
+  	arr.push(val)
+  })
+  		return arr ;
   }
   // values({first : 5, second: 'something' , third : 129}) ==> [5, 'something', 129]; 
 

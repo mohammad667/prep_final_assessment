@@ -6,6 +6,16 @@
 
   function person(name){
     //your code is here
+
+    return 
+        {
+         sayMyName:(function() {
+          return name ;
+         }) ,
+         sayHello:(function() {
+          return "hello"+ +name
+         }) 
+        }
   }
   var personA=person("jack")
   var personB=person("Mark")
@@ -58,6 +68,22 @@
   // player1.chageState(); // false
 
   //writ your code here .....
+  function player("name") {
+    return {
+      playername : name ,
+      addInfo : function(age, position, level, availability ) {
+        return {
+        age : age ,
+        position : position ,
+        level : level ,
+        availability : availability
+        }
+      },
+      increaseLevel(n):function() {
+        addInfo.level = level+n ;
+      }
+    }
+  }
   
 //=======================================================================
 /*                                  Q3                                 */
@@ -66,9 +92,16 @@
   //create a factory function called makeCar that represents cars,
   // what different attributes cars may have? create two cars object from your factory function and save them in one array called cars!
 
-  function makeCar( ?? ){
+   function makeCar( model,color,yearmade,type ){
     // TODO: Your code here
-  }
+         return {
+        model : model,
+        color : color,
+        yearmade : yearmade ,
+        type : type
+      }
+
+   }
                    
   // write function displayCar that can be used to display one car
 
