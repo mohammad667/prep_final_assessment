@@ -54,6 +54,12 @@ function reduce(array, f, acc) {
 
 function addOne(array){ // arrays, loops
  // your code is here
+ var i = 0 ;
+ while (i < array.length) {
+ 			arraay[i] = array[i]+1 ;
+ 			i = i+1 ;
+ }
+ 		return array
 }
 //=============================================================================
 /*                                    Q2                                     */
@@ -67,6 +73,12 @@ function addOne(array){ // arrays, loops
 
 function factorial(n) {
    //your code is here
+   if( n === 1) {
+   	return 1 ;
+   }else{
+   	 var s = n*factorial(n-1)
+   }
+   return s
 }
 
 
@@ -88,6 +100,17 @@ var bucketOfSloths = [
  
 function longestName(bucketOfSloths) {
   //your code is here 
+  var arr = [];
+  for( i=0 ; i<bucketOfSloths.length ; i++) {
+ var name = bucketOfSloths[i][name][first]+bucketOfSloths[i][name][middle]+bucketOfSloths[i][name][last] ;
+ 		arr.push(name) ;
+ 	}
+ 	 return reduce(arr,function(max,ele){
+ 	 			if(ele > max) {
+ 	 				max = ele
+ 	 			}
+ })
+ 	 return max ;
 }
 
 //=============================================================================
